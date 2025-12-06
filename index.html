@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>seni çok seviyorum sevgilim</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+
+<main class="player-card" role="main" aria-label="Sana özel şarkı oynatıcı">
+  <div class="left">
+    <div class="cover-wrap" aria-hidden="true">
+      <img id="coverImg" src="cover.jpg" alt="Şarkı kapak fotoğrafı">
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="track-info">
+      <div class="title" id="trackTitle">bir yağmur meselesi</div>
+      <div class="artist" id="trackArtist">Senin İçin</div>
+    </div>
+
+    <div class="controls">
+      <button id="prev" class="ctrl" aria-label="Önceki">◀◀</button>
+      <button id="play" class="big-play" aria-label="Oynat">►</button>
+      <button id="next" class="ctrl" aria-label="Sonraki">▶▶</button>
+      <button id="like" class="ctrl like" aria-pressed="false" aria-label="Beğen (kalp)">♡</button>
+    </div>
+
+    <div class="progress-row" aria-hidden="false">
+      <span id="currentTime" class="time">00:00</span>
+      <input id="progress" type="range" min="0" max="100" value="0" aria-label="Parça ilerleme çubuğu">
+      <span id="duration" class="time">00:00</span>
+    </div>
+
+    <div class="bottom-row">
+      <a id="download" class="link" download="bir-yagmur-meselesi.mp3" aria-label="Şarkıyı indir">İndir</a>
+      <button id="lyricsBtn" class="link">Sözleri Göster</button>
+    </div>
+
+    <section id="lyrics" class="lyrics hidden" aria-hidden="true">
+      <h2>Sözler</h2>
+      <pre id="lyricsText"> 
+Islanırım ben senin aşkınla 
+Ne oldu da bu hale geldim 
+Sensiz nefes bile alamam ben 
+
+Seni düşünmeden geçmiyor 
+Olmuyor sensiz 
+Seni üzdüysem özür dilerim sevgilim 
+Yağmur gibi yağ üstüme 
+
+Sen varsın kalbimde 
+Geleceğimde bugünümde 
+Başkasına yer yok 
+Sen ol tüm hayatım 
+
+Yağmurda ıslanmayı da severmiş insan 
+Şemsiye açası bile gelmiyor bazen 
+Bu dünyanın en güzel halisin 
+Seni çok seviyorum sevgilim ...</pre>
+    </section>
+  </div>
+</main>
+
+<!-- Şarkı dosyası repo içinde olacağı için yerel dosya adıyla kullanılıyor -->
+<audio id="audio" preload="metadata">
+  <source id="audioSrc" src="bir-yagmur-meselesi.mp3" type="audio/mpeg">
+  Tarayıcınız ses oynatmayı desteklemiyor.
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
